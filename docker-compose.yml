@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  lcdwall:
+    hostname: lcdwall
+    container_name: lcdwall
+    image: hefish/debian-nginx-php8:1.0
+    volumes:
+      - ./wwwroot:/var/www/html
+    restart: always
+
+
+    ports:
+      - 80:8080
